@@ -4,3 +4,4 @@ neotree open: 'n' + ctrl n
 neotree close: 'n' + ctrl m
 fuzzy search: 'n' + ctrl p
 code actions: 'n' + <leader>ca
+live grep: 'n' + <leader>fg

@@ -7,6 +7,7 @@ return {
     local null_ls = require 'null-ls'
     null_ls.setup {
       sources = {
+        -- Remember to instal in mason
         require 'none-ls.diagnostics.eslint_d',
         require 'none-ls.diagnostics.flake8',
         null_ls.builtins.formatting.stylua,

@@ -1,5 +1,4 @@
 return {
-
   {
     'hrsh7th/cmp-nvim-lsp',
   },
@@ -17,10 +16,8 @@ return {
       require('luasnip.loaders.from_vscode').lazy_load()
       cmp.setup {
         snippet = {
-          -- REQUIRED - you must specify a snippet engine
           expand = function(args)
-            --vim.fn['vsnip#anonymous'](args.body) -- For `vsnip` users.
-            require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
+            require('luasnip').lsp_expand(args.body)
           end,
         },
         window = {
@@ -35,8 +32,7 @@ return {
           ['<CR>'] = cmp.mapping.confirm { select = true },
         },
         sources = cmp.config.sources({
-          --{ name = 'nvim_lsp' },
-          --{ name = 'vsnip' }, -- For vsnip users.
+          { name = 'nvim_lsp' },
           { name = 'luasnip' }, -- For luasnip users.
         }, {
           { name = 'buffer' },
